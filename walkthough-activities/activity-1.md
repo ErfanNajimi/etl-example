@@ -26,30 +26,32 @@ Given these epics and their requirements, create user stories for each epic.  Th
 #### Epic 1: Data Availability, Quality, Trust and Access
 
 ```txt
+Version 1.0
 As a Data Analyst,  
-I want ,  
-So that I can 
+I want to access a single, clean dataset combining transaction and demographic data,  
+So that I can analyse spending per customer and identify high-value customers.
 ```
+
 
 #### Epic 2: Customer Insights
 
 ```txt
 As a Data Analyst,  
-I want ,  
-So that I can 
+I want analyse spending per customer,  
+So that I can my business stakholders can identify customers that have spent more than $500.
 
 As a Business Stakeholder,  
-I want ,  
-So that 
-```
+I want to identify customers that have spent more than $500,
+So that I can be informed of our key customers.
+```key customers 
 
 #### Epic 3: Demographic Trends
 
 ```txt
 As a Business Stakeholder,  
-I want ,  
-So that 
-```
+I want insights into age and country trends of key customers,  
+So that ...
+```commerically senstivie 
 
 #### Epic 4: Data Storage and Access
 
@@ -193,15 +195,15 @@ So that I can analyse customer behaviour without worrying about data inconsisten
 ***Acceptance Criteria***
 
 - **Data Extraction**
-  - [ ] Given the database contains  ***...*** rows with  ***...*** fields, when the data is extracted, then it should complete in less than  ***...*** minute.
-  - [ ] Given the CSV file contains  ***...*** rows with  ***...*** columns, when the data is extracted, then it should complete in less than  ***...*** seconds.
+  - [ ] Given the database contains  ***10,500*** rows with  ***4*** fields, when the data is extracted, then it should complete in less than  ***1*** minutes.
+  - [ ] Given the CSV file contains  ***5,200*** rows with  ***5*** columns, when the data is extracted, then it should complete in less than  ***30*** seconds.
 - **Data Cleaning**
-  - [ ] Given the extracted data, when duplicates are removed, ***...***
-  - [ ] Given the extracted data, when missing values are handled, then ***...*** of missing should be resolved.
-  - [ ] Given the extracted data, when invalid values are handled, then ***...*** of invalid fields should be resolved.
-  - [ ] Given the extracted data, when data cleaning is performed,  ***...***
+  - [ ] Given the extracted data, when duplicates are removed, ***no further duplicates should remain (0% duplicates remaining) ***
+  - [ ] Given the extracted data, when missing values are handled, then ***100%*** of missing should be resolved.
+  - [ ] Given the extracted data, when invalid values are handled, then ***100%*** of invalid fields should be resolved.
+  - [ ] Given the extracted data, when data cleaning is performed,  ***it should take less than 1 minute per 100 rows.***
 - **Data Transformation**
-  - [ ] Given the cleaned data, when the customer demographics dataset (CSV) and transaction dataset (database) are merged, then the merge should be performed correctly using the  ***...***` field as the key.
+  - [ ] Given the cleaned data, when the customer demographics dataset (CSV) and transaction dataset (database) are merged, then the merge should be performed correctly using the  ***customer_id***` field as the key.
   - [ ] Given the cleaned data, when calculating the total amount spent by each customer, then the  ***...*** field should be accurate and reflect the sum of all amount values for each  ***...***.
   - [ ] Given the cleaned data, when filtering for active customers, then only customers with  ***...*** set to  ***...*** should be included.
 - **Data Quality**

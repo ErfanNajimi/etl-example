@@ -11,12 +11,12 @@ Identify the missing steps in the high-level flowchart.  Preview the document to
 ```mermaid
 flowchart TD
     A@{ shape: stadium, label: "Start: Data Sources"} --> B@{ shape: tri, label: "Extract Data"}
-    B --> C1@{ shape: cyl, label: "Source 1: ???"}
-    B --> C2@{shape: doc, label: "Source 2: ???"}
-    C1 --> D[???*]
-    C2 --> D[???*]
-    D --> E[???**]
-    E --> F[???***]
+    B --> C1@{ shape: cyl, label: "Source 1: Database"}
+    B --> C2@{shape: doc, label: "Source 2: CSV"}
+    C1 --> D[Merge*]
+    C2 --> D[Merge*]
+    D --> E[Load**]
+    E --> F[Test***]
     F --> G([Deploy Pipeline****])
     
 
@@ -32,8 +32,8 @@ Identify the missing subprocesses in the data cleaning flowchart.  Preview the d
 
 flowchart LR
     A[???*] --> B1@{shape: subproc, label: "???"}
-    B1 --> B2@{shape: subproc, label: "???"}
-    B2 --> B3@{shape: subproc, label: "???"}
+    B1 --> B2@{shape: subproc, label: "Duplicates"}
+    B2 --> B3@{shape: subproc, label: "Nulls"}
     B3 --> B4@{shape: subproc, label: "???"}
     B4 --> B5@{ shape: lean-r, label: "Cleaned Data" }
 ```
@@ -47,7 +47,7 @@ Identify the missing subprocesses in the data transformation flowchart.  Preview
 ```mermaid
 flowchart LR
     A[???**] --> B1@{shape: subproc, label: "???"}
-    B1 --> B2@{shape: subproc, label: "???"}
+    B1 --> B2@{shape: subproc, label: "Merge"}
     B2 --> B3@{shape: subproc, label: "???"}
     B3 --> B4@{shape: subproc, label: "???"}
     B4 --> B5@{ shape: lean-r, label: "Transformed Data" }
