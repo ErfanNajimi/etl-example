@@ -11,6 +11,7 @@ from utils.db_utils import (
     DatabaseConnectionError,
     QueryExecutionError
 )
+from utils.file_utils import QUERY_PATH
 from utils.logging_utils import setup_logger
 from utils.sql_utils import import_sql_query
 from etl.load.post_load_enrichment import enrich_database_data
@@ -30,7 +31,7 @@ LOAD_QUERY_FILES = {
     'load_cleaned_high_value_customers': os.path.join(
         os.path.dirname(__file__), 'load_cleaned_high_value_customers.sql'),
     'set_primary_key': os.path.join(
-        os.path.dirname(__file__), 'set_primary_key.sql')
+        os.path.dirname(QUERY_PATH), 'sql/set_primary_key.sql')
 }
 
 
